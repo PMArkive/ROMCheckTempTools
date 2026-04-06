@@ -204,7 +204,7 @@ int CSwitchGames::readTextFile(const UString& a_sFilePath, STextFileContent& a_T
 			wstring sTextW = U8ToW(sTextU8);
 			string sTextX = WToX(sTextW, 437, "CP437");
 			wstring sTextXW = XToW(sTextX, 437, "CP437");
-			if (sTextXW == sTextW && sTextX.find_first_of("\x88\x8A") == string::npos)
+			if (sTextXW == sTextW && sTextX.find_first_of("\x81\x82\x88\x8A") == string::npos)
 			{
 				a_TextFileContent.TextNew = sTextX;
 				a_TextFileContent.EncodingNew = kEncodingCP437;
